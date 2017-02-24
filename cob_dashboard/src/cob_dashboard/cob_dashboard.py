@@ -39,7 +39,7 @@ from rqt_robot_dashboard.dashboard import Dashboard
 from rqt_robot_dashboard.widgets import MonitorDashWidget, ConsoleDashWidget
 
 from python_qt_binding.QtCore import QSize
-from python_qt_binding.QtGui import QMessageBox
+from python_qt_binding.QtWidgets import QMessageBox
 
 from cob_battery import COBBattery
 
