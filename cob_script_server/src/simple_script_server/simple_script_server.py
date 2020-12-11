@@ -856,6 +856,11 @@ class simple_script_server:
 	# \param parameter_name Name of the parameter on the ROS parameter server.
 	# \param blocking Bool value to specify blocking behaviour.
 	def move_traj(self,component_name,parameter_name,blocking, speed_factor=1.0, urdf_vel=False, default_vel=None, stop_at_waypoints=False):
+		component_names = []
+		if type(component_name) is list:
+			component_names = component_name
+		else:
+			component_names.append(component_name)
 		ah = action_handle("move", component_name, parameter_name, blocking, self.parse)
 		if(self.parse):
 			return ah
